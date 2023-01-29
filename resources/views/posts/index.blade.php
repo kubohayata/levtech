@@ -12,11 +12,11 @@
         <h1>Blog Name</h1>
         <div class='posts'>
             @foreach($posts as $post)
-            <dev class='post'>
-                <h2 class='title'>{{ $post->title}}</h2>
-                <p class='body'>{{ $post->body}}</p>
-            </dev>
-            @endforeach 
+            <div class='post'>
+                <h2 class='title'>{{ $post->title }}</h2>
+                <p class='body'>{{ $post->body }}</p>
+            </div>
+            @endforeach
         </div>
     </body>
 </html>
