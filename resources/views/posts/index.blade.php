@@ -2,8 +2,16 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
+dev_basis02
+                <title>Blog</title>
+
         <title>Blog</title>
+dev_basis03
         
+
+ master
+
+ master
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     
