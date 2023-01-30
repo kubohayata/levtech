@@ -6,20 +6,24 @@ dev_basis02
                 <title>Blog</title>
 
         <title>Blog</title>
+dev_basis03
+        
+
  master
 
+ master
         <!-- Fonts -->
-        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    
     </head>
     <body class="antialiased">
         <h1>Blog Name</h1>
         <div class='posts'>
             @foreach($posts as $post)
-            <div class='post'>
-                <h2 class='title'>{{ $post->title }}</h2>
-                <p class='body'>{{ $post->body }}</p>
-            </div>
+                <div class='post'>
+                    <a href="/posts/{{ $post->id }}"><h2 class='title'>{{ $post->title }}</h2></a>
+                    <p class='body'>{{ $post->body }}</p>
+                </div>
             @endforeach
         </div>
         <div class='paginate'>{{ $posts->links()}}</div>
