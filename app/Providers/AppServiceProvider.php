@@ -3,12 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-dev_basis02
 use Illuminate\Pagination\Paginator;
 
-
-use illuminate\Pagination\Paginator;
- master
 class AppServiceProvider extends ServiceProvider
 {
     /**
