@@ -2,16 +2,8 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-dev_basis02
                 <title>Blog</title>
-
-        <title>Blog</title>
-dev_basis03
         
-
- master
-
- master
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     
@@ -24,9 +16,23 @@ dev_basis03
                 <div class='post'>
                     <a href="/posts/{{ $post->id }}"><h2 class='title'>{{ $post->title }}</h2></a>
                     <p class='body'>{{ $post->body }}</p>
-                </div>
+                    <form action="/posts/{{ $post->id }}" id="form_{{ $post->id }}" method="post">
+                        @csrf
+                        @method('DELETE')
+                         <button type="button" onclick="deletePost({{ $post->id }})">delete</button>
+                    </form>
+               </div>
             @endforeach
         </div>
         <div class='paginate'>{{ $posts->links()}}</div>
+        <script>
+            function deletePost(id){
+                'use strict'
+                
+                if(confirm('削除すると復元できません。\n本当に削除しますか？')){
+                    document.getElementById(`form_${id}`).submit();
+                }
+            }
+        </script>
     </body>
 </html>
