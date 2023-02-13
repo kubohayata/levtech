@@ -3,15 +3,30 @@
     <head>
         <meta charset="utf-8">
                 <title>Blog</title>
+ dev_basis01
+
+        <!-- Fonts -->
+        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        
+           </head>
+
         
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     
     </head>
+ master
     <body class="antialiased">
         <h1>Blog Name</h1>
         <a href="/posts/create">create</a>
         <div class='posts'>
+ dev_basis01
+            <div class='post'>
+                <h2 class='title'>Title1</h2>
+                <p class='body'>This is a sample body</p>
+            </div>
+        </div>
+
             @foreach($posts as $post)
                 <div class='post'>
                     <a href="/posts/{{ $post->id }}"><h2 class='title'>{{ $post->title }}</h2></a>
@@ -35,5 +50,6 @@
                 }
             }
         </script>
+ master
     </body>
 </html>
