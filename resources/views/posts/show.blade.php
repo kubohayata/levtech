@@ -24,5 +24,6 @@
         <div class='footer'>
             <a href="/">戻る</a>
         </div>
+        <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
     </body>
 </html>
