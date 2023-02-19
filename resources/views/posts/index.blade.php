@@ -38,6 +38,20 @@
                     document.getElementById(`form_${id}`).submit();
                 }
             }
+        <div>
+            @foreach($questions as $question)
+                <div>{{ $question['title'] }}<div?
+            @endforeach
+        </div>
+        <div>
+            @foreach($questions as $question)
+                <div>
+                    <a href="https://teratail.com/questions/{{ $question['id'] }}">
+                        {{ $question['title'] }}
+                    </a>
+                </div>
+            @endforeach
+        </div>
         </script>
     </body>
     </x-app-layout>
